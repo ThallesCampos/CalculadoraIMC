@@ -1,0 +1,176 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Corpo do site */
+body {
+    background-color: bisque;
+    color: black;
+    transition: background-color .3s, color .3s;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    background-color: cornflowerblue;
+    color: beige;
+    padding: 20px;
+}
+
+.header h1 {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+}
+
+.header ul {
+    display: flex;
+    justify-content: center;
+}
+
+.header ul li {
+    list-style-type: none;
+    padding: 5px 10px;
+}
+
+.header ul li a {
+    color: #FAF6E3;
+}
+
+#modo {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    left: 90%;
+    color: #000000;
+    background-color: #FAF6E3;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+}
+
+#modo img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55px;
+    height: 55px;
+}
+
+#modo:hover {
+    background-color: aqua;
+}
+
+/* Texto principal */
+.main {
+    display: flex;
+    margin: 40px;
+    align-items: center;
+}
+
+.main .text {
+    font-size: larger;
+    line-height: 1.2em;
+    text-align: justify;
+    padding: 20px;
+}
+
+.main .text h2 {
+    align-items: center;
+    padding: 10px;
+}
+
+.main img {
+    max-width: 600px;
+    max-height: 400px;
+    padding: 20px;
+}
+
+/* Calculadora */
+.container {
+    background-color: #FAF6E3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    width: 40%;
+    height: 30%;
+    margin-top: 100px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+h3 {
+    text-transform: uppercase;
+    background-color: #B59F78;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    padding: 10px;
+}
+
+label, input, p, button {
+    margin: 10px;
+}
+
+input, button {
+    font-size: 16px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #000000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Texto final de resultados */
+.resultados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.text2 {
+    padding: 60px;
+    font-size: larger;
+    line-height: 1.2em;
+    text-align: justify;
+    padding: 20px;
+}
+
+.text2 h2 {
+    align-items: center;
+    padding: 40px 0 10px 0;
+    text-align: center;
+}
+
+.text2 p {
+    padding: 5px 5%;
+}
+
+.resultados img {
+    max-width: 800px;
+    max-height: 400px;
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #272727;
+    color: #FAF6E3;
+}

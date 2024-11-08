@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho do site -->
+    <header class="header" id="header">
+        <h1>Calculadora IMC Online</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
+                <li><a href="#resultado">Resultados</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="button">
+        <button id="modo" onclick="ChangeTextColor()">
+            <img src="https://cdn-icons-png.flaticon.com/512/6702/6702834.png" alt="Botao de mudar modo">
+        </button>
+    </div>
+
+    <!-- Texto principal ao lado de uma imagem -->
+    <main class="main" id="#inicio">
+        <div class="text">
+            <h2>O que é o IMC</h2>
+
+            <p>
+                O Índice de Massa Corporal, ou IMC, é uma medida usada para avaliar a relação entre o peso e a altura de
+                uma pessoa, fornecendo uma indicação geral sobre o seu estado nutricional. Ele ajuda a classificar o
+                peso de um indivíduo em categorias, como baixo peso, peso saudável, sobrepeso ou obesidade. É uma
+                ferramenta simples e amplamente utilizada por profissionais de saúde para identificar possíveis riscos à
+                saúde associados ao peso corporal.
+            </p>
+
+            <br>
+
+            <p>
+                Embora o IMC seja útil como um ponto de partida para entender a composição corporal, é importante
+                lembrar que ele não leva em consideração fatores como a quantidade de músculo, a distribuição da gordura
+                no corpo ou a saúde metabólica de uma pessoa. Isso significa que, em algumas situações, o IMC pode não
+                refletir com precisão a saúde de um indivíduo, especialmente para pessoas com muita massa muscular ou
+                para idosos, cujos corpos podem ter diferentes distribuições de gordura e músculo ao longo do tempo.
+            </p>
+
+            <br>
+
+            <p>
+                Em resumo, o IMC é uma ferramenta prática e acessível, mas deve ser interpretado com cautela, sempre em
+                conjunto com outros fatores e uma avaliação mais completa do estado de saúde. Para um diagnóstico
+                preciso e um plano de cuidados adequado, é essencial consultar um profissional de saúde.
+            </p>
+        </div>
+
+        <img src="https://manalinda.cdn.magazord.com.br/img/2023/10/blog/4169/como-calcular-imc.jpg"
+            alt="Foto com o calculo do IMC">
+    </main>
+
+    <!-- Calculadora funcionando -->
+    <div class="container" id="calculadora">
+        <h3>Índice de Massa Corporal</h3>
+
+        <!-- <form action="#"> -->
+        <label for="altura"> Altura (cm): </label>
+        <input type="number" name="altura" id="altura">
+
+        <label for="peso"> Peso (kg): </label>
+        <input type="number" name="peso" id="peso">
+
+        <button onclick="CalcImc()">Calcular IMC</button>
+
+        <p>Seu Índice de Massa Corporal é: <span id="resultado"></span></p>
+        <!-- </form> -->
+    </div>
+
+    <!-- Explicação do funcionamento e dos resultados -->
+    <div class="resultados" id="resultado">
+        <div class="text2">
+            <h2>Veja o resultado do seu IMC aqui:</h2>
+
+            <p>
+                O cálculo do Índice de Massa Corporal (IMC) é simples e consiste em uma fórmula que relaciona o peso com
+                a altura de uma pessoa. Para calcular o IMC, basta dividir o peso em quilogramas (kg) pelo quadrado da
+                altura em metros (m²). A fórmula é a seguinte:
+            </p>
+
+            <p>
+                IMC = peso (kg) / altura² (m) <br><br>
+
+                Por exemplo, se uma pessoa pesa 70 kg e tem 1,75 m de altura, o cálculo seria: <br><br>
+
+                IMC = 70 / (1,75 × 1,75) = 70 / 3,0625 ≈ 22,86 <br><br>
+
+                Esse número, o IMC, é então comparado com as faixas de valores preestabelecidas para indicar a categoria
+                de peso da pessoa.
+            </p>
+
+        </div>
+        <img src="https://www.saudebemestar.pt/media/89347/obesidade.jpg" alt="Tabela do IMC">
+    </div>
+
+    <footer>
+        <p>IOS | &copy; Todos os direitos reservados | 2024</p>
+    </footer>
+
+    <script>
+        function CalcImc() {
+            const ALTURA = parseFloat(document.getElementById('altura').value);
+            const PESO = parseFloat(document.getElementById('peso').value);
+
+            const RESULT = PESO / (ALTURA ** 2);
+
+            document.getElementById('resultado').textContent = RESULT.toFixed(2);
+        }
+
+        function ChangeTextColor() {
+            const HEADER = document.getElementById('header');
+            HEADER.style.backgroundColor = HEADER.style.backgroundColor === 'black' ? 'cornflowerblue' : 'black';
+
+            const BODY = document.body;
+            BODY.style.backgroundColor = BODY.style.backgroundColor === 'cornflowerblue' ? 'bisque' : 'cornflowerblue';
+            BODY.style.color = BODY.style.color === 'beige' ? 'black' : 'beige';
+        }
+    </script>
+
+</body>
+
+</html>
